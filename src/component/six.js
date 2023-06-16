@@ -7,12 +7,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import "../App.css"
 import $ from 'jquery';
-class Eight extends React.Component{
+class Six extends React.Component{
   constructor(props){
     super(props);
     this.conf = false;
     this.state = {
-      audio: new Audio(''), isplay:false,play: '',data: [], id:'', match:[], endpoint: 'https://ola90.pythonanywhere.com',useTime: true, load: true,loadBtn:true, audit:'', loadSpan:false,like:false,toStyle:false, dis:{display:'none'},showPopup:false,popupData:{}, nowPlaying:false,tracker:1,idPlayer:{},dataId:0, hasError:false
+      audio: new Audio(''), isplay:false,play: '',data: [], id:'', match:[], endpoint: 'https://ola90.pythonanywhere.com',useTime: true, load: true,loadBtn:true, audit:'', loadSpan:false,like:false,toStyle:false, dis:{display:'none'},showPopup:false,popupData:{}, nowPlaying:false,tracker:1,idPlayer:{},dataId:0
     }
     this.playLoad = {color:"red", backgroundColor:"yellow"}
     this.mycss = [
@@ -26,7 +26,7 @@ class Eight extends React.Component{
     this.playMusic = this.playMusic.bind(this);
     setTimeout(()=>{
       this.setState({useTime:false})
-    }, 12000);
+    }, 1000);
   }
   playMusic(){
     if (this.state.isplay){
@@ -48,9 +48,8 @@ class Eight extends React.Component{
   async componentDidMount(){
     let response = await fetch('https://ola90.pythonanywhere.com');
     let res = await response.json();
-    let mydata = res.slice(Math.floor(res.length) / 2)
-    let newData = mydata.slice(0,7);
-    this.setState({idPlayer:newData[0], play:newData[0], data: mydata.slice(0,50), id:newData[0], load:false})
+    let newData = res.slice(0,7);
+    this.setState({idPlayer:newData[5], play:newData[5], data: res.slice(0,50), id:newData[5], load:false})
     if (this.state.load === false){
        this.setState({audio: new Audio(this.state.endpoint+this.state.play.song)});
        this.state.audio.preload = 'metadata';
@@ -65,9 +64,6 @@ class Eight extends React.Component{
           $('.active').css({display:'none'})
         }, 10000);
       }
-    }
-    componentDidCatch(error, info){
-      this.setState({hasError:true})
     }
   render(){
     if (this.state.useTime === true){
@@ -227,4 +223,4 @@ class Eight extends React.Component{
     }
   }
 }
-export default Eight;
+export default Six;

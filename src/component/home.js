@@ -58,6 +58,28 @@ class Home extends React.Component{
             })}
             </div>
             </div>
+            
+            <footer style={{marginTop:'10vw'}} className="container-fluid">
+              <div style={{justifyContent:'space-evenly'}} className='container-fluid d-flex justify-content-center justify-content-between'>
+               <h2 style={{fontSize:'4vw',color:'lightgreen'}}>Hot Categories</h2>
+               <h2 style={{fontSize:'4vw',color:'lightgreen'}}>Information</h2>
+              </div>
+                  <div style={{justifyContent:'space-evenly'}} className='d-flex container-fluid justify-content-center justify-content-between'>
+             
+               <h2 style={{fontSize:'4vw'}} className="text-danger">About us</h2>
+               <h2 style={{fontSize:'4vw'}} className="text-danger">Privacy</h2>
+              </div>
+              <hr/>
+              <div style={{margin:'2vw',padding:'3vw'}} className="p- m-5 text-center">
+                <a style={{fontSize:'6vw', backgroundColor:'green', padding:'2vw', borderRadius:'50%'}} href="https://www.facebook.com/afolabi.azeez.127201"><i className="fa fa-twitter text-light"></i></a>
+                   <a style={{fontSize:'6vw', backgroundColor:'green', padding:'2vw', borderRadius:'50%'}} href="https://www.facebook.com/afolabi.azeez.127201"><i className="fa fa-facebook text-light"></i></a>
+                   <a style={{fontSize:'6vw', backgroundColor:'green', padding:'2vw', borderRadius:'50%'}} href="https://www.instagram.com/afolabi.azeez.127201"><i className="fa fa-instagram text-light"></i></a>
+                    <a style={{fontSize:'6vw', backgroundColor:'green', padding:'2vw', borderRadius:'50%'}} href="https://Wa.me/2348080891605"><i className="fa fa-whatsapp text-light"></i></a>
+              </div>
+              <div className="text-center">
+                <p style={{fontSize:'4vw'}} className="text-light">Copyright © 2022 - 2023 | Buzz</p>
+              </div>
+            </footer>
         </div>
       );
         }

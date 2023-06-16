@@ -1,3 +1,6 @@
+
+
+
 //import logo from './logo.svg';
 import React from 'react';
 import './App.css';
@@ -13,6 +16,14 @@ import Two from './component/two.js';
 import Three from './component/three.js';
 import Eight from './component/eight.js';
 import Four from './component/four.js';
+import Five from './component/five.js';
+import Six from './component/six.js';
+import Nine from './component/nine.js';
+import Ten from './component/ten.js';
+import Eleven from './component/ele.js';
+import Twelve from './component/twel.js';
+import Thirt from './component/thirt.js';
+import Fourt from './component/f.js';
 class App extends React.Component{
   constructor(){
     super();
@@ -39,20 +50,15 @@ class App extends React.Component{
        <Route path='/playlist/1' element={<Two />} />
        <Route path='/playlist/2' element={<Three />} />
        <Route path='/playlist/3' element={<Four />} />
-       <Route path='/playlist/4' element={<New />} />
-       <Route path='/playlist/5' element={<New />} />
+       <Route path='/playlist/4' element={<Five />} />
+       <Route path='/playlist/5' element={<Six />} />
        <Route path='/playlist/6' element={<New />} />
-       <Route path='/playlist/7' element={<New />} />
        <Route path='/playlist/8' element={<Eight />} />
-       <Route path='/playlist/9' element={<New />} />
-       <Route path='/playlist/10' element={<New />} />
-       <Route path='/playlist/11' element={<New />} />
-       <Route path='/playlist/12' element={<New />} />
-       <Route path='/playlist/13' element={<New />} />
-       <Route path='/playlist/14' element={<New />} />
-       <Route path='/playlist/' element={<New />} />
-       <Route path='/music' element={<Music />} />
-       <Route path='/video' element={<Video />} />
+       <Route path='/playlist/9' element={<Nine />} />
+       <Route path='/playlist/10' element={<Ten />} />
+       <Route path='/playlist/11' element={<Eleven />} />
+       <Route path='/playlist/12' element={<Twelve />} />
+       <Route path='/playlist/13' element={<Thirt />} />
       </Routes>
     </BrowserRouter>
   );

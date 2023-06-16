@@ -7,7 +7,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import "../App.css"
 import $ from 'jquery';
-class Eight extends React.Component{
+class Eleven extends React.Component{
   constructor(props){
     super(props);
     this.conf = false;
@@ -50,7 +50,7 @@ class Eight extends React.Component{
     let res = await response.json();
     let mydata = res.slice(Math.floor(res.length) / 2)
     let newData = mydata.slice(0,7);
-    this.setState({idPlayer:newData[0], play:newData[0], data: mydata.slice(0,50), id:newData[0], load:false})
+    this.setState({idPlayer:newData[3], play:newData[3], data: mydata.slice(0,50), id:newData[3], load:false})
     if (this.state.load === false){
        this.setState({audio: new Audio(this.state.endpoint+this.state.play.song)});
        this.state.audio.preload = 'metadata';
@@ -227,4 +227,4 @@ class Eight extends React.Component{
     }
   }
 }
-export default Eight;
+export default Eleven;
