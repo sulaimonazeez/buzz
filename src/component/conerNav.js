@@ -11,12 +11,13 @@ class Coner extends React.Component{
       <br/><br/><br/><br/>
       <button onClick={this.props.close} className="btn btn-close"><i className='fa fa-close'></i></button><br /><br /><br/><br/><br/><br/><br/>
           <Link onClick={this.props.close} className='link' to="/">Home</Link><br/><br/>
-         <Link onClick={this.props.close} className='link' to="#">Login</Link><br/><br/>
-         <Link onClick={this.props.close} className='link' to="#">Sign Up</Link><br/><br/>
-         <Link onClick={this.props.close} className='link' to="">__</Link> <br/><br/>
-         <Link onClick={this.props.close} className='link' to="#">Help</Link><br/><br/>
-         <Link onClick={this.props.close} className='link' to="#">Term</Link><br /><br />
-         <Link onClick={this.props.close} className='link' to="#">Privacy</Link>
+         <Link onClick={this.props.close} className='link' to="/">Login</Link><br/><br/>
+         <Link onClick={this.props.close} className='link' to="/">Sign Up</Link><br/><br/>
+         <Link onClick={this.props.close} className='link' to="/">__</Link> <br/><br/>
+         <Link onClick={this.props.close} className='link' to="/">Help</Link><br/><br/>
+         <Link onClick={this.props.close} className='link' to="/">Term</Link><br /><br />
+         <Link onClick={this.props.close} className='link' to="/">Privacy</Link>
+         <div style={{display:'none'}}>Learn React</div>
       </div>
     );
   }
