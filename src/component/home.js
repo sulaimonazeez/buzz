@@ -3,11 +3,12 @@
 
 
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import '../App.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import Hi from './api_call.js';
 import Hello from './datarender.jsx'
-import {Link} from 'react-router-dom';
+//import {Link} from 'react-router-dom';
 class Home extends React.Component{
   constructor(){
     super();
@@ -20,8 +21,6 @@ class Home extends React.Component{
   async componentDidMount(){
     let response = await fetch('https://ola90.pythonanywhere.com');
     let res = await response.json();
-    let date = new Date();
-    let year = date.getFullYear();
     let firstData = res.slice(0, 7)
     let config = res.slice(res.length / 2);
     let secondData = config.slice(0,7);
@@ -35,9 +34,9 @@ class Home extends React.Component{
               );
         }else{
           return (
-          <div className="album-container container-fluid">
+          <div className="album-container bg-dark">
           <div className='container-fluid'>
-          <h1 className="latest">Deep</h1>
+          <h1 className="text-light latest">Deep</h1>
           <div className='flex-box'>
             {this.state.data2.map((data, ind)=>{
               return(
@@ -47,7 +46,7 @@ class Home extends React.Component{
                 )
             })}
             </div>
-                                  <h1 style={{marginTop:'9vw'}} className="latest">Trending Now</h1>
+                                  <h1 style={{marginBottom:'-2vw',marginTop:'9vw'}} className="text-light latest"><strong>Trending Now</strong></h1>
           <div className='flex-box'>
             {this.state.latests.map((data, ind)=>{
               return(
@@ -69,8 +68,8 @@ class Home extends React.Component{
                <h2 style={{fontSize:'4vw'}} className="text-danger">About us</h2>
                <h2 style={{fontSize:'4vw'}} className="text-danger">Privacy</h2>
               </div>
-              <hr/>
-              <div style={{margin:'2vw',padding:'3vw'}} className="p- m-5 text-center">
+              <hr className="text-light"/>
+              <div style={{margin:'2vw',padding:'3vw'}} className="p- m-3 text-center">
                 <a style={{fontSize:'6vw', backgroundColor:'green', padding:'2vw', borderRadius:'50%'}} href="https://www.facebook.com/afolabi.azeez.127201"><i className="fa fa-twitter text-light"></i></a>
                    <a style={{fontSize:'6vw', backgroundColor:'green', padding:'2vw', borderRadius:'50%'}} href="https://www.facebook.com/afolabi.azeez.127201"><i className="fa fa-facebook text-light"></i></a>
                    <a style={{fontSize:'6vw', backgroundColor:'green', padding:'2vw', borderRadius:'50%'}} href="https://www.instagram.com/afolabi.azeez.127201"><i className="fa fa-instagram text-light"></i></a>

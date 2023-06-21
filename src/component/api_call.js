@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link} from 'react-router-dom';
 class Hi extends React.Component{
   constructor(props){
@@ -7,8 +8,8 @@ class Hi extends React.Component{
   }
   render(){
     return(
-      <Link to={this.props.link}>
-        <img className='album' src={this.props.album} />
+      <Link id="data-comp" style={{textDecoration:'none'}} to={this.props.link}>
+        <img alt="Go" className='album' src={this.props.album} />
         <h2 className='data-title'>{this.props.title}</h2>
       </Link>
     )

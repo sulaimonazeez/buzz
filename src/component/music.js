@@ -4,19 +4,19 @@ class Music extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      load: false, data: [], error: null
+      endpoint:'https://ola90.pythonanywhere.com'
     }
-  }
-  
-  componentDidMount(){
-    fetch('http://127.0.0.1:8000/api').then(res => res.json()).then((data) =>{
-      alert("hey");
-    });
   }
   render(){
     return (
-      <div>
-        <h1>fugh ugu iguv ji y know vubu u   ueje rir rir rirveir rueveie doe rirveir rir rir </h1>
+      <div className="container-fluid">
+        <div className='container-fluid album-card1'>
+           <img src={this.state.endpoint+this.props.staticImage} alt="Playing Now"/>
+        </div>
+        <div className="container-fluid">
+          <h1 className="text-light">{this.props.title}</h1>
+          <p style={{fontSize:'16px',color:'lightgrey'}} className="">Your weekly mixtape of fresh music. Enjoy new music and deep cuts picked for you. Update every Monday.</p>
+        </div>
       </div>
     );
   }

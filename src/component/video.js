@@ -1,39 +1,27 @@
-import React from 'react';
 
+
+
+import React from 'react';
+import '../App.css';
 class Videos extends React.Component{
   constructor(props){
     super(props);
-    this.state = { bio: false }
-    this.handleView = this.handleView.bind(this)
-  }
-  handleView(){
-    this.setState({bio: !this.state.bio})
   }
   render(){
     return (
-      <div>
-        {this.state.bio ? (
-        <div>
-          <h1>Video tutorial </h1>
-          <button onClick = {this.handleView}>Show less</button>
-        </div>
-      
-        ) : (
-         <div>
-          <h1> Coding is fun </h1>
-          <button onClick={this.handleView}>Show more </button>
-          </div>
-        )
-      }
+     <div className="container-fluid">
+      <div style={{justifyContent:'space-between'}} className="d-flex">
+         <div style={{justifyContent:'space-evenly',fontSize:'5vw'}} className="p-3 d-flex">
+           <i className="p-2 awesome fa fa-heart"></i>
+           <i className="p-2 awesome fa fa-download"></i>
+           <i className="p-2 awesome fa fa-ellipsis-v"></i>
+         </div>
+         <button className='btn-player' onClick={this.props.play}>
+            {this.props.isplay ? <i className="fa fa-pause"></i> : <i className='fa fa-play'></i>}
+         </button>
       </div>
+     </div>
     )
   }
 }
-function Video(){
-  return (
-    <div>
-      <Videos />
-    </div>
-  )
-}
-export default Video;
+export default Videos;

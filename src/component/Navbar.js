@@ -5,9 +5,6 @@ import logo from '../images/buzz.jpeg';
 import {Link} from 'react-router-dom';
 import $ from 'jquery';
 class Nav extends React.Component{
-  constructor(){
-    super();
-  }
   navBar = () =>{
     $('.coner-nav').css({display: 'block'});
   }
@@ -19,7 +16,7 @@ class Nav extends React.Component{
       <div>
       <div className='fixed-top nav-container'>
       <nav className="fixed-top d-flex justify-content-between">
-       <img className="image-logo" src={logo} />
+       <img alt="navbar" className="image-logo" src={logo} />
        <div className="d-flex justify-content-between inner-cont">
        <Link to='/search' className="glys glyphicon glyphicon-search gly-search"></Link>
        <button className="st btn btn-light rounded-pill">Streaming</button>
