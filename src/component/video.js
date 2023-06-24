@@ -10,7 +10,7 @@ class Videos extends React.Component{
   render(){
     return (
      <div className="container-fluid">
-      <div style={{justifyContent:'space-between'}} className="d-flex">
+      <div style={{justifyContent:'space-between'}} className="justify-content-between d-flex">
          <div style={{justifyContent:'space-evenly',fontSize:'5vw'}} className="p-3 d-flex">
            <i className="p-2 awesome fa fa-heart"></i>
            <i className="p-2 awesome fa fa-download"></i>

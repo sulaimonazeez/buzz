@@ -33,7 +33,7 @@ class Search extends React.Component {
       return (
       <div className="container-fluid">
       <div style={{marginTop:'10vw'}}><br/>
-         <input type="search" name="search_query" className="p-2 form-control" value={this.state.inputVal} placeholder="Search on Buzz..." onInput={this.Triger}/>
+         <input type="search" name="search_query" className="p-5 form-control" value={this.state.inputVal} placeholder="Search on Buzz..." onInput={this.Triger}/>
         </div>
         
         <div className="mt-4">
@@ -41,11 +41,11 @@ class Search extends React.Component {
            if (data.title.startsWith(this.state.inputVal) || data.title.endsWith(this.state.inputVal)||data.artist.startsWith(this.state.inputVal) || data.artist.endsWith(this.state.inputVal) ){
            if (this.state.inputVal){
               return(
-               <div key={indx} onClick={()=>{
+               <div onClick={()=>{
                  this.setState({playId:data, isSearch:false, pointer:data});
                  this.audio.src = this.state.endpoint+data.song;
                }} className="p-3 d-flex">
-               <img style={{borderRadius:'2%',height:'40px',width:'40px'}} alt="searching" src={this.state.endpoint+data.album} />
+               <img style={{borderRadius:'2%',height:'40px',width:'40px'}} alt="searching Image" src={this.state.endpoint+data.album} />
                <div style={{position:'relative',left:'8vw'}}>
                  <h4 className="text-light">{data.title}</h4>
                  <span style={{color:'lightgrey'}}>{data.artist}</span>
