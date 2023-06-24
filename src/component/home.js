@@ -2,7 +2,7 @@
 
 
 
-
+import MetaTags from 'react-meta-tags';
 import React from 'react';
 import '../App.css';
 //import 'bootstrap/dist/css/bootstrap.min.css';
@@ -24,7 +24,7 @@ class Home extends React.Component{
     let firstData = res.slice(0, 7)
     let config = res.slice(res.length / 2);
     let secondData = config.slice(0,7);
-    this.setState({load:true,latests:firstData, data2:secondData});
+    this.setState({data:res,load:true,latests:firstData, data2:secondData});
     
   }
   render(){
@@ -57,7 +57,20 @@ class Home extends React.Component{
             })}
             </div>
             </div>
-            
+            <div className="wrapper">
+              <MetaTags>
+                 {this.state.data.map((data)=>{
+                   return(
+                     <div>
+                       <title>{data.title}-{data.artist}</title>
+                       <meta id="meta-description" name="description" content={data.artist+" is one of the most popular artist trending now. Download latest song on buzz"} />
+                       <meta id="og-title" property="og:title" content="Buzz is one of the fatest web app interm of music, latest songs, latest videos, trending artist only on buzz"/>
+                       <meta id="og-image" property="og:image" content={this.state.endpoint+data.album} />
+                     </div>
+                   )
+                 })}
+              </MetaTags>
+            </div>
             <footer style={{marginTop:'10vw'}} className="container-fluid">
               <div style={{justifyContent:'space-evenly'}} className='container-fluid d-flex justify-content-center justify-content-between'>
                <h2 style={{fontSize:'4vw',color:'lightgreen'}}>Hot Categories</h2>
