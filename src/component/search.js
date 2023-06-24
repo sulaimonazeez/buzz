@@ -33,7 +33,7 @@ class Search extends React.Component {
       return (
       <div className="container-fluid">
       <div style={{marginTop:'10vw'}}><br/>
-         <input type="search" name="search_query" className="p-5 form-control" value={this.state.inputVal} placeholder="Search on Buzz..." onInput={this.Triger}/>
+         <input autocomplete="off" type="search" name="search_query" className="p-4 form-control" value={this.state.inputVal} placeholder="Search on Buzz..." onInput={this.Triger}/>
         </div>
         
         <div className="mt-4">

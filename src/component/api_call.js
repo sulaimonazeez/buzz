@@ -9,8 +9,8 @@ class Hi extends React.Component{
   render(){
     return(
       <Link id="data-comp" style={{textDecoration:'none'}} to={this.props.link}>
-        <img alt="Go" className='album' src={this.props.album} />
-        <h2 className='data-title'>{this.props.title}</h2>
+        <img alt="Go" className='album' src={this.props.album} /><br/>
+        <span className='mt-3 text-light data-title'>{this.props.title}</span>
       </Link>
     )
   }
