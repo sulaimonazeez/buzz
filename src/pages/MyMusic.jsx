@@ -58,7 +58,7 @@ const MusicDashboard = () => {
       </aside>
 
       {/* Main Content */}
-      <main className="col-12 col-md-7 col-lg-7 content-area p-4">
+      <main className="col-12 col-md-6 col-lg-6 content-area p-4">
         
         {/* Hero Banner */}
         <section
