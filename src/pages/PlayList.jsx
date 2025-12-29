@@ -1,7 +1,8 @@
 import React, { useEffect, useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../App.css";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Music from "../components/music";
 import Videos from "../components/video";
 import Modal from "../components/nowPlaying";

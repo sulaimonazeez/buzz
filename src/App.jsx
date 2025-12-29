@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import AllRoute from "./routes/router";
 import Controlers from "./components/controls";
+import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { PlayerProvider, PlayerContext } from "./context/PlayerContext";
 import {GlobalProvider, GlobalContext} from "./context/GlobalContext"
 const GlobalPlayer = () => {

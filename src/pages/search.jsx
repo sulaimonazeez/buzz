@@ -2,6 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import Music from "../components/music";
 import Videos from "../components/video";
 import Controlers from "../components/controls";
+import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "../App.css";
 import { PlayerContext } from "../context/PlayerContext";
 import { GlobalContext } from "../context/GlobalContext";

@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import PopularArtist from "../components/home/popularArtist";
+import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './MyMusic.css'; 
 import RecentPlay from "../components/home/recentPlay";
 import "bootstrap-icons/font/bootstrap-icons.css";
