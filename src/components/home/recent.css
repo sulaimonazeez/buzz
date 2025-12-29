@@ -1,0 +1,23 @@
+.recent-play {
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s ease;
+}
+
+.recent-play:hover {
+  background: #f8f9fa;
+}
+
+.recent-play-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.font-light {
+  font-weight: 500;
+}
+
+@media screen and (min-width: 767px) { 
+  .rounded-circle {
+} 

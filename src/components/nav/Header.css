@@ -1,0 +1,48 @@
+/* Header.css */
+.dashboard-header {
+  background-color: black; /* Black background */
+  width: 100%;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.search-icon {
+  font-size: 0.9rem; /* Tiny icon */
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.search-icon:hover {
+  color: white;
+}
+
+.header-link {
+  font-size: 0.8rem; /* Small link text */
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.header-link:hover {
+  color: white;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .dashboard-header {
+    justify-content: center; /* Center content on very small screens */
+  }
+  
+  .dashboard-header .flex-wrap {
+    gap: 1rem; /* Space links nicely on small screens */
+  }
+  
+  .search-icon {
+    font-size: 0.8rem;
+  }
+
+  .header-link {
+    font-size: 0.75rem;
+  }
+}

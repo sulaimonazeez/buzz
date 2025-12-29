@@ -1,0 +1,136 @@
+/* Home Container */
+.home-container {
+  background-color: #121212;
+  color: #fff;
+  padding: 2vw;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 2.5vw;
+  margin-bottom: 2vw;
+  color: #1db954; /* Spotify green accent */
+  font-weight: 700;
+}
+
+/* Album Grid (Latest Picks) */
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2vw;
+}
+
+.album-card {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.album-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(29, 185, 84, 0.7);
+}
+
+.album-info {
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  width: 100%;
+  padding: 1vw;
+  border-radius: 0 0 12px 12px;
+}
+
+.album-info h3 {
+  font-size: 1.2vw;
+  margin: 0;
+}
+
+.album-info p {
+  font-size: 1vw;
+  margin: 0;
+  color: #b3b3b3;
+}
+
+/* Trending Horizontal Scroll */
+.trending-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5vw;
+  padding-bottom: 1vw;
+  scrollbar-width: none; /* Firefox */
+}
+.trending-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.trending-card {
+  min-width: 180px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.trending-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.trending-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(29, 185, 84, 0.7);
+}
+
+.trending-info h4 {
+  font-size: 1vw;
+  margin: 0.5vw 0 0 0;
+}
+
+.trending-info span {
+  font-size: 0.8vw;
+  color: #b3b3b3;
+}
+
+/* Footer */
+.home-footer {
+  margin-top: 5vw;
+  text-align: center;
+  padding: 2vw 0;
+  border-top: 1px solid #333;
+  color: #b3b3b3;
+}
+
+.footer-links a {
+  margin: 0 1vw;
+  color: #1db954;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-social a {
+  margin: 0 0.5vw;
+  font-size: 2vw;
+  color: #1db954;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-social a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+.loading {
+  color: #1db954;
+  font-size: 5vw;
+  text-align: center;
+  margin-top: 20vw;
+}
